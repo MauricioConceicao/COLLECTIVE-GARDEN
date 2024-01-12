@@ -1,0 +1,20 @@
+.janelaExistente {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  z-index: 1;
+}
+
+#map{
+  position: absolute;   
+  z-index: 0;/*define a sobreposiçao do objeto como inferior, que fica atras*/
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  
+}
