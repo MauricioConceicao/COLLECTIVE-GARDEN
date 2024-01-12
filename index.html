@@ -7,7 +7,19 @@
     <title>COLLECTIVE GARDEN!</title>
     <link rel="shortcut icon" href="icons/iconeembranco-transformed.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+
+     <script src="script.js"></script>
+
+
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </head>
 <body>
 
@@ -24,28 +36,71 @@
             </center>
         </div>
     </div>
-
+    
     <div id="menu">
         <button id="meu botao" onclick="minhaFuncao()"><img src="icons/icon_menu.png"></button>
     </div>
     
-
-    <div id="mapa">
-        
-        <center>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56836.07579732696!2d-51.33128689420788!3d-30.11912299860787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1704919561944!5m2!1spt-BR!2sbr" 
-                width="1350"
-                height="620"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </center>
-        
-    </div>
     
+    
+        <div id="map"></div>
+        
+    
+    <script>
+
+        //define onde o mapa fica estatico.
+        var map = L.map('map').setView([-30.115731, -51.327438], 13);
+
+        //define o estilo(layer) do mapa.
+        var layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        //adiciona o layer no mapa.
+        layer.addTo(map);
+
+        // adiciona marcador(pointers)  
+        var marker = L.marker([-30.115731, -51.327438]).addTo(map);
+        
+        //adiciona circulos
+        var circle = L.circle([-30.115731, -51.327438], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+        }).addTo(map);
+
+        //adiciona poligonos
+        var polygon = L.polygon([
+        [,-30.115731, -51.327438]
+        [-30.115731, -51.327438],
+        [-30.115731, -51.327438]
+        ]).addTo(map);
+
+        //popups
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        circle.bindPopup("I am a circle.");
+        polygon.bindPopup("I am a polygon.");
+
+        //popup souto
+        var popup = L.popup()
+        .setLatLng([51.513, -0.09])
+        .setContent("I am a standalone popup.")
+        .openOn(map);
+
+        //evento que indica longiitude e latitude do mapa.
+        var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+            .setLatLng(e.latlng)
+            .setContent( e.latlng.toString())
+            .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+
+    </script>
     
 
 </body>

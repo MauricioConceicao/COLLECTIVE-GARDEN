@@ -21,4 +21,3 @@ function minhaFuncao() {
     window.open("menu.html", "_blank", "with=500", "height=500")
 }
 
-
