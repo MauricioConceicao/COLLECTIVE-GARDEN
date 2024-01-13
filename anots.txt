@@ -18,3 +18,120 @@
   object-fit: cover;
   
 }
+
+
+=================================
+
+
+<script>
+
+        //define onde o mapa fica estatico.
+        var map = L.map('map').setView([-30.115731, -51.327438], 13);
+
+        //define o estilo(layer) do mapa.
+        var layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        //adiciona o layer no mapa.
+        layer.addTo(map);
+
+        // adiciona marcador(pointers)  
+        var marker = L.marker([-30.115731, -51.327438]).addTo(map);
+        
+        //adiciona circulos
+        var circle = L.circle([-30.115731, -51.327438], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+        }).addTo(map);
+
+        //adiciona poligonos
+        var polygon = L.polygon([
+        [51.513, -0.09]
+        [51.513, -0.09],
+        [51.513, -0.09]
+        ]).addTo(map);
+
+        //popups
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        circle.bindPopup("I am a circle.");
+        polygon.bindPopup("I am a polygon.");
+
+        //popup souto
+        var popup = L.popup()
+        .setLatLng([51.513, -0.09])
+        .setContent("I am a standalone popup.")
+        .openOn(map);
+
+        //evento que indica longiitude e latitude do mapa.
+        var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+            .setLatLng(e.latlng)
+            .setContent( e.latlng.toString())
+            .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+
+    </script>
+
+
+
+    =========================================================================
+
+    atual funcionando:
+
+
+
+
+    
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Nome e icone da ABA-->
+            <title>COLLECTIVE GARDEN!</title>
+            <link rel="shortcut icon" href="icons/iconeembranco-transformed.ico" type="image/x-icon">
+
+        <!--implementando CSS do projeto-->
+            <link rel="stylesheet" href="style.css">
+
+        <!--implementando JS do projeto-->
+            <script src="script.js"></script>
+
+
+        <link rel="stylesheet" href="background.html">
+    </head>
+    <body>
+        
+        <!--implementanto tela SplashScreen de carregamento-->
+            <div id="janelaExistente" style="display: none;">
+                <center>
+                    <img src="splashscreen_image.jpg" style="width: auto; height: auto;">       
+                </center>
+            </div>
+        <!--implementando botao menu-->
+            <div id="menu" style="z-index: 1; top: 3%;">
+                <button id="meu botao" onclick="minhaFuncao()"><img src="icons/icon_menu.png"></button>
+            </div>
+        
+        <div id="background"></div>
+        <script>
+
+            fetch('background.html').then(Response=>Response.text()).then(data =>{
+
+                document.getElementById('background').innerHTML = data;
+            });
+
+        </script>
+    </body>
+</html>
+

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     janelaExistente.style.position = 'fixed';
     janelaExistente.style.top = '50%';
     janelaExistente.style.left = '50%';
-    janelaExistente.style.zIndex = 1;
+    janelaExistente.style.zIndex = 3;
     janelaExistente.style.transform = 'translate(-50%, -50%)';
 
     // Exibindo a janela existente
@@ -18,7 +18,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 4000); //tempo desejado de milissegundos
     });
 
-function minhaFuncao() {
-    window.open("menu.html", "_blank", "with=500", "height=500")
-}
+
 
