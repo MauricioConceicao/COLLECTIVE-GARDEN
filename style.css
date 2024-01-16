@@ -132,7 +132,7 @@ nav.menu-lateral:hover{
 
 /* responsividade tela pequena */
 
-@media(max-width: 750px){
+@media(max-width: 450px){
 
 
   html, body {
