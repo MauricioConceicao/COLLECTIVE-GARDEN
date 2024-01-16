@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     janelaExistente.style.left = '50%';
     janelaExistente.style.zIndex = 3;
     janelaExistente.style.transform = 'translate(-50%, -50%)';
+    janelaExistente.style.backgroundSize = cover;
 
     // Exibindo a janela existente
     janelaExistente.style.display = 'block';
