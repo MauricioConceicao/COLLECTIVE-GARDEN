@@ -134,7 +134,7 @@ nav.menu-lateral:hover{
 
 /* responsividade tela pequena */
 
-@media(max-width: 2280px ){
+@media(max-width: 320px){
 
   .btn-expandir{
     visibility:visible;
