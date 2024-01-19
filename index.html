@@ -33,18 +33,16 @@
 <body>
     
     <!--implementanto tela SplashScreen de carregamento-->
-        <div id="janelaExistente" style="display: none;">
-            <center>
-                <img src="splashscreen_image.jpg" style="width: auto; height: auto;">       
-            </center>
-        </div>    
+    <div id="janelaExistente" style="display: none;">
+        <center>
+            <img src="splashscreen_image.jpg" style="width: auto; height: auto;">       
+        </center>
+    </div>    
     
     <!--implementando mapa-->
-        <div id="mapa">
-            
-           <div id="map"></div>
-
-        </div>
+               
+        <div id="map"></div>
+        
     <!--Iniciando JS-->    
         
     <script>
@@ -66,7 +64,7 @@
 
         //=================configs de elementos no mapa==================
 
-        // adiciona marcador(pointers)  
+        // adiciona marcador(pointers) de localizaçoes de plantas.  
             
             var oro = L.marker([-30.093059, -51.334440],{
                 draggable: false,  //opçao de arrastar o pointer.
@@ -79,9 +77,47 @@
                 title: "terramissina"}//terramissina
             ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
         
-    
+            var Alecrin = L.marker([-30.0900784,-51.3371068],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "Alecrin"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
         
-
+            var Menta = L.marker([-30.0939731,-51.3405912],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "Menta"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+            
+            var Limoeiro = L.marker([-30.0900627,-51.3230465],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "Limoeiro"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+        
+            var terramissina = L.marker([-30.089972,-51.3338659],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "terramissina"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+        
+            var Bananneira = L.marker([-30.0901091,-51.3319769],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "Bananneira"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+        
+            var Pessegueiro = L.marker([-30.0901091,-51.3319769],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "Pessegueiro"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+        
+            var terramissina = L.marker([-30.0889555,-51.3368428],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "terramissina"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+            
+            var Bananneira = L.marker([-30.0884742,-51.3374024],{
+                draggable:false, //opçao de arrastar o pointer.
+                title: "Bananneira"}//terramissina
+            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+        
+            
 
 
         //popups em objetos.
@@ -122,9 +158,11 @@
     <!--implementando botao menu-->
         <nav class="menu-lateral">
 
-           <div class="btn-expandir">
-            <i class="bi bi-list"></i>
-           </div>
+            <div class="btn-expandir">
+
+                <i class="bi bi-list"></i>
+           
+            </div>
            
 
             <ul>
@@ -142,7 +180,7 @@
 
                     <a href="#">
                         <span class="icon"><i class="bi bi-columns-gap"></i></span>
-                        <span class="txt-link">DASBOARD</span>
+                        <span class="txt-link">DASHBOARD</span>
                     </a>
 
                 </li>
@@ -150,8 +188,8 @@
                 <li class="item-menu">
 
                     <a href="#">
-                        <span class="icon"></span>
-                        <span class="txt-link"></span>
+                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                        <span class="txt-link">ITEM 3</span>
                     </a>
 
                 </li>
@@ -159,8 +197,8 @@
                 <li class="item-menu">
 
                     <a href="#">
-                        <span class="icon"></span>
-                        <span class="txt-link"></span>
+                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                        <span class="txt-link">ITEM 4</span>
                     </a>
 
                 </li>
