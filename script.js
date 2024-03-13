@@ -17,5 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         janelaExistente.style.display = 'none';
     }, 4000); //tempo desejado de milissegundos
-    });
+});
 
+$('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
+function validatePasswords() {
+    var pwd = document.getElementById("pwd").value;
+    var cpwd = document.getElementById("cpwd").value;
+  
+    if (pwd != cpwd) {
+      alert("As senhas não coincidem.");
+      return false;
+    }
+  
+    return true;
+}
