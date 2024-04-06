@@ -48,9 +48,7 @@
 <body>
 
     
-    <audio autoplay="audio.mp3" loop>
-        seu navegavegador nao suporta
-    </audio>
+    
      
     
 
@@ -65,7 +63,7 @@
 
         //define onde o mapa fica estatico.
 
-            var map = L.map('map').setView([-30.093181, -51.334734], 26);
+            var map = L.map('map').setView([-30.110162, -51.326065], 13);
 
         //define o estilo(layer) do mapa.
                
@@ -82,11 +80,7 @@
 
         // adiciona marcador(pointers) de localizaçoes de plantas.  
             
-            var oro = L.marker([-30.093059, -51.334440],{
-                draggable: false,  //opçao de arrastar o pointer.
-                title: "Orô"}//oro
-            ).addTo(map).bindPopup('<div id="oro_pop"><center><h4>Orô</h4><p>Folhas sagradas, Euê Orô (Ewé Orò) <br>ou Folhas de Orô é como são chamadas as folhas,<br>plantas, raízes, sementes e favas <br>utilizadas nos preceitos e cerimônias <br>como água sagrada das religiões afro-brasileiras.</p><img src="imagensPlantas/oro.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-
+            
 
             var terramissina = L.marker([-30.093386, -51.334363],{
                 draggable:false, //opçao de arrastar o pointer.

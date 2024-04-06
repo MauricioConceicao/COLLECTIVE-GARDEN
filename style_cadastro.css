@@ -1,7 +1,8 @@
 form {
     width: 300px;
-    margin: 0 auto;
+    margin: center;
   }
+
   
   label {
     display: block;
@@ -16,6 +17,17 @@ form {
   
   input[type="submit"] {
     margin-top: 20px;
+}
+.form-main {
+  position: relative;
+  z-index: 1;
+  background: #30d430;
+  max-width: 360px;
+  margin: center;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 30px;
 }
 .logo{
 

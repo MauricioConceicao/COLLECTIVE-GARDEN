@@ -19,7 +19,7 @@
             <form class="login-form" action="testeLogin.php" method = "POST">
               <input type="text" placeholder="e-mail" name='email'/>
               <input type="password" placeholder="password" name='password'/>
-              <input type="submit" name="submit" value= "enviar">
+              <input type="submit" name="submit" value= "enviar" style="background: #289c04;">
               <p class="message">Não é registrado? <a href="telaCadastro.php">Crie sua conta</a></p>
             </form>
           </div>
