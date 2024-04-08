@@ -147,72 +147,11 @@
             //.setContent("I am a standalone popup.")
             //.openOn(map);
 
-        //evento que indica longiitude e latitude com click no mapa.
-
-            var popup = L.popup();
-
-            function onMapClick(e) {
-
-
-                var lat = e.lat
-                var lng = e.lng
-
-                fetch('http://localhost/teste/teste.php?lat='+lat+'&lng='+lng);
-                  
-            popup
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(map);
-            }
-
-            map.on('click', onMapClick);
-
-        
-
-            //armazenando a latitude e a longitude no php.
-            
-            var popup = L.popup();
-
-            function onMapClick(e) {
-                var latitude = e.latlng.lat; // Obter a latitude
-                var longitude = e.latlng.lng; // Obter a longitude
-    
-                // Criar um objeto FormData e adicionar os dados
-                var formData = new FormData();
-                formData.append('latitude', latitude);
-                formData.append('longitude', longitude);
-    
-                // Enviar os dados para o arquivo PHP usando Fetch
-                fetch('http://localhost/COLLECTIVE-GARDEN/pegalocaliza.php?lat=', {
-                    method: 'POST',
-                    body: formData
-                })
-
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Dados enviados com sucesso para o PHP.');
-                    }else {
-                        console.error('Erro ao enviar os dados para o PHP.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao enviar os dados para o PHP:', error);
-                });
-    
-                popup
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(map);
-            }
-
-            map.on('click', onMapClick);
-
     </script>
-    
-    <!--=======================implementando objetos na aplicaçao web========================================-->
-
-    <!-- implementando menu -->
-    <!--implementando botao menu-->
+       
+        <!--=======================implementando objetos na aplicaçao web========================================-->
+        <!-- implementando menu -->
+        <!--implementando botao menu-->
         <nav class="menu-lateral">
 
             <div class="btn-expandir">
@@ -226,7 +165,7 @@
 
                 <li class="item-menu">
 
-                    <a href="#">
+                    <a href="home.php">
                         <span class="icon"><i class="bi bi-house-door-fill"></i></span>
                         <span class="txt-link">HOME</span>
                     </a>
@@ -235,9 +174,9 @@
 
                 <li class="item-menu">
 
-                    <a href="#">
+                    <a href="cadastro_planta.php">
                         <span class="icon"><i class="bi bi-columns-gap"></i></span>
-                        <span class="txt-link">DASHBOARD</span>
+                        <span class="txt-link">CADASTRAR PLANTAS</span>
                     </a>
 
                 </li>
@@ -246,7 +185,7 @@
 
                     <a href="#">
                         <span class="icon"><i class="bi bi-columns-gap"></i></span>
-                        <span class="txt-link">ITEM 3</span>
+                        <span class="txt-link">WIKIPÉDIA</span>
                     </a>
 
                 </li>

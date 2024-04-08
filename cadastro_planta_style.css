@@ -1,45 +1,39 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  overflow: hidden; /* nao deixa a pagina rolar */
-}
-
-body {
-  
-  
-  animation: moveGradient infinite; /* Ajuste a duraÃ§Ã£o conforme necessÃ¡rio */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background: linear-gradient(to bottom, #289c04, #000000);
-}
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
-
 #map{
-  z-index: 0;
-  position: absolute;   
-  width:100%;
-  height:100%;
-  object-fit: cover;  
+    z-index: 0;
+    position: absolute;   
+    width:100%;
+    height:100%;
+    object-fit: cover;  
 }
 
-
+.tutorial_cadastro{
+    z-index: 3;
+    width: 200px;
+    height: 150px;
+    margin-top: 1%;
+    display: flex;
+    padding: 0;
+}
+ol{
+    width: 200px;
+    height: 150px;
+}
+#menu{
+    z-index: 1;
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 10px;
+    left: 20px;
+    object-fit: cover;
+}
 .icon {
   width: 50px;
   height: 50px;
   display: inline-block;
   position: relative;
 }
-
+  
 .options {
   display: none;
   position: absolute;
@@ -48,24 +42,6 @@ body {
   background-color: #2ecc71;
   padding: 10px;
 }
-
-
-#menu{
-  z-index: 2;
-  position: absolute;
-  width:100%;
-  height:100%;
-  top: 10px;
-  left: 20px;
-  object-fit: cover;
-}
-.div_perfil{
-  background-color: silver;
-  width: 5%;
-  height: 5%;
-}
-
-/*implementando menu*/
 
 nav.menu-lateral{
    width: 40px;
@@ -77,26 +53,26 @@ nav.menu-lateral{
    left: 0;
    overflow: hidden;
 }
-
+ 
 .btn-expandir{
   width: 100%;
   padding: 10px;
   visibility: hidden;
 }
-
+ 
 .btn-expandir > i{
   color: white;
   font-size: 24px;
   cursor:pointer;
 }
-
+ 
 ul{
   height: 100%;
   list-style-type: none;
   padding-left: 10px;
   margin: 0;
 }
-
+ 
 ul li.item-menu a{
   color: white;
   text-decoration: none;
@@ -106,15 +82,15 @@ ul li.item-menu a{
   margin-bottom: 10px;
   line-height: 40px;
 }
-
+ 
 ul li.item-menu a .txt-link{
   margin-left: 15px;
 }
-
+ 
 ul li.item-menu:hover{
   background: #008000;
 }
-
+ 
 ul li.item-menu a.icon > i{
   margin-left: 10px;
   font-size: 30px;
@@ -124,17 +100,5 @@ ul li.item-menu a{
 }
 nav.menu-lateral:hover{
   width: 300px;
-  
-}
-
-
-
-/* responsividade tela pequena */
-
-@media(max-width: 450px){
-
-  .btn-expandir{
-    visibility:visible;
-  }
-
+   
 }
