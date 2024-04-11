@@ -1,8 +1,8 @@
 <?php
 
-    $dbHost = 'LocalHost';
+    $dbHost = 'viaduct.proxy.rlwy.net';
     $dbUsername = 'root';
-    $dbPassword = '';
+    $dbPassword = 'xmqwHmPfAfTKKvoTLfKMAsEQxBVvNwsl';
     $dbName = 'collective_garden';
 
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
@@ -15,3 +15,4 @@
     //}
 
 ?>
+
