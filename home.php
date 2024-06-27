@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include_once('config.php');
     if((!isset($_SESSION['email'])== true) and (!isset($_SESSION['senha']) == true)){
         
         unset($_SESSION['email']);
@@ -11,6 +12,33 @@
         $logado = $_SESSION['email'];
 
     }
+    if (!$conexao) {
+        die("Erro ao conectar-se ao banco de dados: " . mysqli_connect_error());
+    }
+    
+    // Consulta para recuperar os dados de latitude e longitude
+    $sql = "SELECT latitude, longetude FROM cadastro_plantas";
+    $result = mysqli_query($conexao, $sql);
+    
+    // Criar um array para armazenar os dados
+    $markers = array();
+    
+    while ($row = mysqli_fetch_assoc($result)) {
+        $markers[] = array(
+            'latitude' => $row['latitude'],
+            'longetude' => $row['longetude']
+        );
+    }
+    
+    // Fechar conexão com o banco de dados
+    mysqli_close($conexao);
+    
+    // Passar os dados para o JavaScript
+    echo '<script>';
+    echo 'var markers = ' . json_encode($markers) . ';';
+    echo '</script>';
+    ?>
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -80,54 +108,14 @@
 
         // adiciona marcador(pointers) de localizaçoes de plantas.  
             
-            
-
-            var terramissina = L.marker([-30.093386, -51.334363],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "terramissina"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
         
-            var Alecrin = L.marker([-30.0900784,-51.3371068],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "Alecrin"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-        
-            var Menta = L.marker([-30.0939731,-51.3405912],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "Menta"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-            
-            var Limoeiro = L.marker([-30.0900627,-51.3230465],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "Limoeiro"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-        
-            var terramissina = L.marker([-30.089972,-51.3338659],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "terramissina"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-        
-            var Bananneira = L.marker([-30.0901091,-51.3319769],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "Bananneira"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-        
-            var Pessegueiro = L.marker([-30.0901091,-51.3319769],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "Pessegueiro"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-        
-            var terramissina = L.marker([-30.0889555,-51.3368428],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "terramissina"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-            
-            var Bananneira = L.marker([-30.0884742,-51.3374024],{
-                draggable:false, //opçao de arrastar o pointer.
-                title: "Bananneira"}//terramissina
-            ).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
-        
-            
+            // Criar os marcadores
+            for (var i = 0; i < markers.length; i++) {
+                var marker = L.marker([markers[i].latitude, markers[i].longetude], {
+                    draggable: false,
+                    title: "Terramicina Antibiótico Natural"
+                }).addTo(map).bindPopup('<div id="terramissina_pop"><center><h4>Terramicina Antibiótico Natural</h4><p>Por causa de sua ação diurética e anti-inflamatória o chá de terramicina é um ótimo aliado na eliminação da bactéria Escherichia coli causadora da cistite.</p><img src="imagensPlantas/terramissina.jpg" style="height: auto; height: auto;" alt=""></center></div>');
+            }
 
 
         //popups em objetos.
@@ -185,7 +173,7 @@
 
                     <a href="#">
                         <span class="icon"><i class="bi bi-columns-gap"></i></span>
-                        <span class="txt-link">WIKIPÉDIA</span>
+                        <span class="txt-link">GARDENPÉDIA</span>
                     </a>
 
                 </li>

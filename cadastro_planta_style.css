@@ -102,3 +102,13 @@ nav.menu-lateral:hover{
   width: 300px;
    
 }
+.alerta{
+
+  z-index: 3;
+  padding-top: 12px;
+}
+
+
+
+
+
