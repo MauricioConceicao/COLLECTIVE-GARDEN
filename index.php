@@ -15,6 +15,11 @@
 
   <body>
 
+      <audio autoplay>
+        <source src="musica.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+
       <center><img class="logo" src="logosemfundo.png">
       <div class="bv2"><h1>Bem-Vindo <br> Cadastre-se e faça login para continuar.</h1></center>
     

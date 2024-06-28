@@ -93,6 +93,11 @@
 </head>
 <body>
 
+    <audio autoplay>
+        <source src="musica.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
     <!-- Menu lateral -->
     <nav class="menu-lateral">
 
