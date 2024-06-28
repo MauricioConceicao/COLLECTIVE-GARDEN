@@ -64,12 +64,16 @@
         }
 
         /* Estilo da página wiki */
-       .wiki-page{
-            margin-left: 40px;
-            padding: 20px;
-            height: 100vh;
+        .wiki-page {
+        margin-left: 40px;
+        padding: 20px;
+        height: 100vh;
+        display: flex; /* Add this line */
+        flex-wrap: wrap; /* Add this line */
+        justify-content: center; /* Add this line */
         }
        .fruta{
+        margin: 20px;
         background-color: #FFFFFF;
         display: inline-block;
         padding: 20px;
