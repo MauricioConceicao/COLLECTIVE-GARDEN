@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_cadastro.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
     <center>
         <h1>Faça seu cadastro!</h1>
         <div class="formulario_cadastro_usuario">
             <img class="logo" src="logosemfundo.png">
-            <form id="myForm">
+            <form action="telaCadastro.php" method="POST" onsubmit="return validatePasswords()">
                 <label class="txt-form" for="fname">Nome:</label>
-                <input type="text" id="fname" name="fname" required>
+                <input type="text" id="fname" name="nome" required>
                 <label class="txt-form" for="lname">Sobrenome:</label>
-                <input type="text" id="lname" name="lname" required>
+                <input type="text" id="lname" name="sobrenome" required>
                 <label class="txt-form" for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label class="txt-form" for="pwd">Senha:</label>
-                <input type="password" id="pwd" name="pwd" required>
+                <input type="password" id="pwd" name="password" required>
                 <label class="txt-form" for="cpwd">Confirmar senha:</label>
-                <input type="password" id="cpwd" name="cpwd" required>
-                <input class="btn-enviar" type="submit" value="Enviar" onclick="return validatePasswords()">
-            
-                
-                
+                <input type="password" id="cpwd" name="confirmapwd" required>
+
+
+                <input type="submit" name="submit" id="submit">
+
             </form>
-            <form action = "index.html" method="get">
+            <form action = "index.php" method="GET">
                 <button type="submit">Já Possuo</form>
             </form>
-            
+
         </div>
-        <br>
         <br>
         <br>
     </center>

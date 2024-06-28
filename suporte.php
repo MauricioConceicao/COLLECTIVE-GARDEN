@@ -159,6 +159,49 @@
     </style>
 </head>
 <body>
+        
+<style>
+                .splash-screen {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                    background: linear-gradient(to bottom, #34C759, #000000);
+                }
+
+                .splash-screen-logo {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .splash-screen-loading {
+                    font-size: 24px;
+                    color: white;
+                }
+            </style>
+
+            <div class="splash-screen">
+            <img src="logosemfundo.png" alt="Logo" class="splash-screen-logo">
+            <p class="splash-screen-loading">Carregando...</p>
+            </div>
+
+            <!-- JavaScript to hide the splash screen after a delay -->
+            <script>
+            setTimeout(function() {
+                document.querySelector('.splash-screen').style.display = 'none';
+            }, 3000); // Hide the splash screen after 3 seconds
+            </script>
+
+            <!-- Your main content here -->
+            <div class="main-content">
+            <!-- Your HTML content here -->
+            </div>
 
         <audio autoplay>
             <source src="musica.mp3" type="audio/mp3">
