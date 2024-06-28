@@ -44,28 +44,28 @@
     <div class="Alerta">
         <script>
 
-            function showImagePopup(imageUrl) {
-            var html = '<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 10px; border: 1px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); z-index: 1000;"><img src="' + imageUrl + '" alt="Imagem" style="max-width: 100%; height: auto;"><button style="position: absolute; top: 10px; right: 10px; background-color: transparent; border: none; font-size: 20px; font-weight: bold; cursor: pointer;">X</button></div>';
-            document.body.insertAdjacentHTML('beforeend', html);
+        function showImagePopup(imageUrl) {
+        var html = '<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 10px; border: 1px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); z-index: 1000; width: 80%; max-width: 500px;"><img src="' + imageUrl + '" alt="Imagem" style="max-width: 100%; height: auto;"><button style="position: absolute; top: 10px; right: 10px; background-color: #FF0000; color: #FFFFFF; border: none; font-size: 20px; font-weight: bold; cursor: pointer; padding: 5px 10px; border-radius: 5px;">X</button></div>';
+        document.body.insertAdjacentHTML('beforeend', html);
 
-            // Função para fechar o popup
-            function closePopup() {
-                var popup = document.querySelector('div[style*="position: fixed;"]');
-                if (popup) {
-                popup.remove();
-                }
+        // Função para fechar o popup
+        function closePopup() {
+            var popup = document.querySelector('div[style*="position: fixed;"]');
+            if (popup) {
+            popup.remove();
             }
+        }
 
-            // Adicionar o evento de clique no botão de fechar
-            var closeButton = document.querySelector('button[style*="position: absolute;"]');
-            if (closeButton) {
-                closeButton.addEventListener('click', closePopup);
-            }
-            }
+        // Adicionar o evento de clique no botão de fechar
+        var closeButton = document.querySelector('button[style*="position: absolute;"]');
+        if (closeButton) {
+            closeButton.addEventListener('click', closePopup);
+        }
+        }
 
-            // Chamar a função com a URL da imagem
-            showImagePopup('TUTORIA.png');
-            
+        // Chamar a função com a URL da imagem
+        
+        showImagePopup('./imagensPlantas/TUTORIAL.gif');
 
         </script>
     </div>
@@ -260,7 +260,7 @@
                 <li class="item-menu">
 
                     <a href="home.php">
-                        <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                        <span class="icon"><i class="bi bi-house-door"></i></span>
                         <span class="txt-link">HOME</span>
                     </a>
 
@@ -268,8 +268,8 @@
 
                 <li class="item-menu">
 
-                    <a href="#">
-                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                    <a href="cadastro_planta.php">
+                        <span class="icon"><i class="bi bi-pencil"></i></span>
                         <span class="txt-link">CADASTRAR PLANTAS</span>
                     </a>
 
@@ -277,9 +277,18 @@
 
                 <li class="item-menu">
 
-                    <a href="#">
-                        <span class="icon"><i class="bi bi-columns-gap"></i></span>
+                    <a href="wiki.php">
+                        <span class="icon"><i class="bi bi-search"></i></i></span>
                         <span class="txt-link">GARDENPÉDIA</span>
+                    </a>
+
+                </li>
+
+                <li class="item-menu">
+
+                    <a href="suporte.php">
+                        <span class="icon"><i class="bi bi-telephone"></i></i></span>
+                        <span class="txt-link">SUPORTE</span>
                     </a>
 
                 </li>
@@ -293,6 +302,7 @@
 
                 </li>
             </ul>
+        
         </nav>
 
 

@@ -47,7 +47,7 @@
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 12px;
+  font-size: 15px;
 }
 .form .message a {
   color: #ffffff;
@@ -95,14 +95,14 @@ body {
   background: linear-gradient(#289c04, #000000);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+  -moz-osx-font-smoothing: grayscale;
+        
 }
 .logo{
-
   width: 200px;
   height: 200px;
 }
 h1{
 
-  color: rgb(238, 255, 236);
+  color: white
 }

@@ -6,12 +6,17 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style-login.css">
+      <style>
+        body {
+            overflow: hidden;
+        }
+      </style>
   </head>
 
   <body>
 
-      <center><img class="logo" src="logosemfundo.png" alt="Seja Bem-Vindo, faça login para continuar.">
-      <h1>Bem-Vindo, faça login para continuar.</h1></center>
+      <center><img class="logo" src="logosemfundo.png">
+      <div class="bv2"><h1>Bem-Vindo <br> Cadastre-se e faça login para continuar.</h1></center>
     
       <div class="login-page">
           <div class="form">
@@ -23,7 +28,7 @@
               <p class="message">Não é registrado? <a href="telaCadastro.php">Crie sua conta</a></p>
             </form>
           </div>
-        </div>
+      </div>
 
   </body>
   

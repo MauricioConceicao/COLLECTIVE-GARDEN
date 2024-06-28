@@ -1,0 +1,25 @@
+
+body {
+  
+  
+    animation: moveGradient infinite; /* Ajuste a duraÃ§Ã£o conforme necessÃ¡rio */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #289c04, #000000);
+}
+
+
+.form-wiki{
+
+    background-color:  #d4ffd3;
+    width: 40%;
+    height: 50%;
+    margin: center;
+}
+
+.visualplanta{
+
+    width: 30%;
+    height: 30%;
+}

@@ -1,76 +1,43 @@
-<?php
-
- if(isset($_POST['submit']))
-    {
-        //print_r($_POST['nome']);
-        //print_r('<br>');
-        //print_r($_POST['sobrenome']);
-        //print_r('<br>');
-        //print_r($_POST['email']);
-        //print_r('<br>');
-        //print_r($_POST['password']);
-        //print_r('<br>');
-        //print_r($_POST['confirmapwd']);
-
-        include_once('config.php');
-
-
-        $nome = $_POST['nome'];
-        $sobrenome = $_POST['sobrenome'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $confirmapwd = $_POST['confirmapwd'];
-
-        $result = mysqli_query($conexao, "INSERT INTO cadastro_usuario(nome,sobrenome,email,senha) VALUES('$nome','$sobrenome','$email','$password')");
-        header('location: index.php');
-    }
-
-?>
-
-
+<!-- telaCadastro.php -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_cadastro.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-    <center>
-        <h1>Faça seu cadastro!</h1>
-        <div class="formulario_cadastro_usuario">
-            <img class="logo" src="logosemfundo.png">
-            <div class="form-main">
-                <form action="telaCadastro.php" method="POST">
-                    <label class="txt-form" for="fname">Nome:</label>
-                    <input type="text" id="fname" name="nome" required>
-                    <label class="txt-form" for="lname">Sobrenome:</label>
-                    <input type="text" id="lname" name="sobrenome" required>
-                    <label class="txt-form" for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label class="txt-form" for="pwd">Senha:</label>
-                    <input type="password" id="pwd" name="password" required>
-                    <label class="txt-form" for="cpwd">Confirmar senha:</label>
-                    <input type="password" id="cpwd" name="confirmapwd" required onchange="validatePasswords()">
-
-            
-                    <input type="submit" name="submit" id="submit">
-                
-                </form>
-                <form action = "index.php" method="GET">
-                    <button type="submit">Já Possuo</form>
-                </form>
+    <div class="container">
+        <center>
+            <div class="formulario_cadastro_usuario">
+                <img class="logo" src="logosemfundo.png" alt="Logo" style="width: 300px; height: 300px; margin: 20px auto;">
+                <div class="form-main">
+                    <h1 style="font-size: 24px; color: #fff; margin-bottom: 20px;">Faça seu cadastro!</h1>
+                    <form action="telaCadastro.php" method="POST">
+                        <label class="txt-form" for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Ex: João">
+                        <label class="txt-form" for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" required placeholder="Ex: Silva">
+                        <label class="txt-form" for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="Ex: joao.silva@example.com">
+                        <label class="txt-form" for="senha">Senha:</label>
+                        <input type="password" id="senha" name="password" required placeholder="Digite sua senha">
+                        <label class="txt-form" for="confirma_senha">Confirmar Senha:</label>
+                        <input type="password" id="confirma_senha" name="confirmapwd" required placeholder="Digite novamente sua senha" onchange="validatePasswords()">
+                        <input type="submit" name="submit" id="submit" value="Cadastrar" style="background: #289c04; color: #fff; padding: 10px 20px; border: none; border-radius: 30px; cursor: pointer;">
+                        
+                    </form>
+                    <form action="index.php" method="GET">
+                        <button action="index.php" method="GET" type="submit" style="background: #289c04; color: #fff; padding: 10px 20px; border: none; border-radius: 30px; cursor: pointer;">Já Possuo</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-    </center>
+        </center>
+    </div>
     <script>
         function validatePasswords() {
-            var pwd = document.getElementById("pwd").value;
-            var cpwd = document.getElementById("cpwd").value;
+            var pwd = document.getElementById("senha").value;
+            var cpwd = document.getElementById("confirma_senha").value;
   
             if (pwd != cpwd) {
                 alert("As senhas não coincidem.");
