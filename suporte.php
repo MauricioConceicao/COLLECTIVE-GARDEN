@@ -186,10 +186,10 @@
                 }
             </style>
 
-            <div class="splash-screen">
+            <div class="splash-screen"><center>
             <img src="logosemfundo.png" alt="Logo" class="splash-screen-logo">
             <p class="splash-screen-loading">Carregando...</p>
-            </div>
+            </div></center>
 
             <!-- JavaScript to hide the splash screen after a delay -->
             <script>
