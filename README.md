@@ -39,7 +39,7 @@ Podemos revisar estes Termos a qualquer momento sem aviso prévio. É sua respon
 
 Contato
 
-Se você tiver alguma dúvida ou preocupação sobre estes Termos, entre em contato conosco pelo e-mail mauricioconceicao777@gmail.com ou através do nosso site em suporte.
+Se você tiver alguma dúvida ou preocupação sobre estes Termos, entre em contato conosco pelo e-mail mauricioconceicao777@gmail.com ou através do nosso site em suporte https://collectivegarden.000webhostapp.com/suporte.php .
 
 Aceitação
 
