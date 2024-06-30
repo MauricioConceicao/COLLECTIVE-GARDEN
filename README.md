@@ -1,17 +1,48 @@
-# COLLECTIVE-GARDEN
+TERMOS DE SERVIÇO
 
-**Apresentando o COLLECTIVE GARDEN:** 
+Bem-vindo ao COLLECTIVE GARDEN
 
-Seja bem-vindo ao COLLECTIVE GARDEN, uma plataforma inovadora que conecta pessoas apaixonadas por frutas frescas e sustentabilidade. Nosso aplicativo é um espaço dedicado a cadastrar proprietários de árvores frutíferas e áreas públicas com frutas abundantes para trocas conscientes.
+Estes Termos de Serviço ("Termos") regem o seu acesso e uso do site do COLLECTIVE GARDEN (coletivamente, a "Plataforma"). Ao acessar ou usar a Plataforma, você concorda em ficar vinculado a estes Termos.
 
-Imagine ter acesso a uma variedade de frutas frescas diretamente das árvores, sem custo algum. O COLLECTIVE GARDEN permite que você descubra e se conecte com proprietários de árvores frutíferas e espaços públicos que estão repletos de deliciosas frutas prontas para o consumo.
+Nossa missão
 
-Nossa missão é promover a partilha de frutas de forma sustentável, reduzindo o desperdício alimentar e incentivando a comunidade a apreciar e compartilhar os recursos naturais ao seu redor.
+COLLECTIVE GARDEN é uma plataforma que conecta pessoas apaixonadas por frutas frescas e sustentabilidade. Nossa missão é promover o compartilhamento de frutas de forma sustentável, reduzindo o desperdício de alimentos e incentivando a comunidade a valorizar e compartilhar os recursos naturais ao seu redor.
 
-Como funciona? É simples! Basta cadastrar suas árvores ou áreas públicas com frutas em abundância no aplicativo, indicando o tipo de fruta disponível e sua localização. Assim, outros usuários podem encontrar esses locais, organizar trocas e colher frutas frescas de maneira colaborativa.
+Como funciona
 
-Junte-se a nós no COLLECTIVE GARDEN e faça parte dessa comunidade comprometida com a sustentabilidade, o compartilhamento e a apreciação dos recursos naturais. Vamos cultivar conexões, sabores e uma consciência ambiental mais saudável juntos!
+A Plataforma permite aos utilizadores registarem as árvores de espaços públicos com frutos abundantes, indicando o tipo de fruto disponível e a sua localização. Outros usuários podem então encontrar esses locais, colher frutas frescas de forma colaborativa.
 
-Baixe o COLLECTIVE GARDEN e comece a explorar um novo mundo de sabores frescos e trocas sustentáveis hoje mesmo!
+Responsabilidades do usuário
 
-EM DESENVOLVIMENTO...
+Ao utilizar a Plataforma, você concorda em:
+
+Fornecer informações precisas e atualizadas sobre as áreas públicas;
+Respeitar os frutos cadastrados pelos outros usuários;
+Colha apenas frutas que estejam disponíveis e maduras;
+Siga os regulamentos e diretrizes locais para a colheita de frutas;
+Seja respeitoso e cortês com os outros usuários.
+Propriedade intelectual
+
+A Plataforma e seu conteúdo, incluindo, entre outros, textos, imagens e logotipos, são propriedade da COLLECTIVE GARDEN e estão protegidos pelas leis de direitos autorais. Você não pode reproduzir, modificar, adaptar ou criar trabalhos derivados do conteúdo da Plataforma sem nossa permissão expressa.
+
+Responsabilidade
+
+A COLLECTIVE GARDEN não se responsabiliza por quaisquer danos ou perdas resultantes do uso da Plataforma. Não garantimos a exatidão ou confiabilidade das informações fornecidas pelos usuários.
+
+Terminação
+
+Poderemos rescindir ou suspender o seu acesso à Plataforma a qualquer momento, sem aviso prévio, se você violar estes Termos ou se envolver em quaisquer atividades prejudiciais ou ilegais.
+
+Alterações nos Termos
+
+Podemos revisar estes Termos a qualquer momento sem aviso prévio. É sua responsabilidade revisar regularmente estes Termos para quaisquer alterações.
+
+Contato
+
+Se você tiver alguma dúvida ou preocupação sobre estes Termos, entre em contato conosco pelo e-mail mauricioconceicao777@gmail.com ou através do nosso site em suporte.
+
+Aceitação
+
+Ao usar a Plataforma, você reconhece que leu, entendeu e concorda em ficar vinculado a estes Termos. Se você não concorda com estes Termos, por favor, não use a Plataforma.
+
+Obrigado por se juntar à comunidade COLLECTIVE GARDEN!
